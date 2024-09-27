@@ -31,7 +31,7 @@ reserva_id int primary key auto_increment,
 cliente_id int,
 parking_id int,
 fecha_reserva timestamp default current_timestamp,
-estado enum('activa', 'cancel·lada'),
+estado enum('activa', 'cancelada'),
 foreign key (cliente_id) references clientes(cliente_id) on delete cascade,
 foreign key (parking_id) references parkings(parking_id) on delete cascade
 );
@@ -40,6 +40,6 @@ create table plazas(
 plaza_id int primary key auto_increment,
 parking_id int,
 numero_plaza int,
-estado enum('lliure', 'ocupada') default 'lliure',
+estado enum('libre', 'ocupada') default 'libre',
 foreign key (parking_id) references parkings(parking_id) on delete cascade
 );
