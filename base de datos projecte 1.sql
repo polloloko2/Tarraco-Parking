@@ -23,6 +23,7 @@ parking_id int primary key auto_increment,
 nombre varchar(255),
 ubicacion varchar(255),
 plazas_disponibles int,
+plazas_restantes int,
 total_plazas int
 );
 
